@@ -4,23 +4,33 @@ This tool generates plain markdown files from the Theorycrafting Library's data 
 
 ## Usage
 
-From the project root, run:
+From the scripts directory, run:
 
 ```bash
-npm run build:markdown
+node build-markdown.js
+```
+
+Or run individual scripts:
+
+```bash
+node generate-characters.js    # Generate character documentation
+node generate-weapons.js       # Generate weapon documentation  
+node generate-artifacts.js     # Generate artifact documentation
+node process-docs.js           # Process existing documentation
+node verify-content.js         # Verify generated content
 ```
 
 This will:
-1. Generate character documentation from JSON data files
-2. Generate weapon documentation from JSON data files  
-3. Generate artifact documentation from JSON data
-4. Process existing markdown documentation to remove MDX/React components
-5. Create a structured output in the `/output` directory
+1. Generate character documentation from JSON data files in `../TCL/src/data/characters/`
+2. Generate weapon documentation from JSON data files in `../TCL/src/data/weapons/`
+3. Generate artifact documentation from JSON data in `../TCL/src/data/artifacts.json`
+4. Process existing markdown documentation from `../TCL/docs/` to remove MDX/React components
+5. Create a structured output in the `../outputs/` directory
 
 ## Output Structure
 
 ```
-output/
+outputs/
 ├── index.md                 # Main index with links to all content
 ├── characters/              # Character stats, talents, constellations
 │   ├── character-name.md
@@ -68,3 +78,5 @@ output/
 - Interactive elements and complex formatting are simplified or removed
 - All data is extracted from the same sources used by the website
 - The output directory is completely regenerated on each run
+- Scripts are configured to work with the TCL submodule structure
+- Source data is read from the TCL directory, output is written to the project root outputs directory
