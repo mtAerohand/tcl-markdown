@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 // Import character curves and frame data
-const characterCurves = require('../../src/data/character_curves.json');
-const elementalCurves = require('../../src/data/elemental_curves/player.json');
+const characterCurves = require('../TCL/src/data/character_curves.json');
+const elementalCurves = require('../TCL/src/data/elemental_curves/player.json');
 
 // Helper function to calculate character stats at specific level and ascension
 function getCharStatsAt(char, lv, asc) {
@@ -93,14 +93,14 @@ function cleanDescription(desc) {
 
 // Process a single character
 function processCharacter(charFile) {
-  const charData = JSON.parse(fs.readFileSync(path.join(__dirname, '../../src/data/characters', charFile), 'utf8'));
+  const charData = JSON.parse(fs.readFileSync(path.join(__dirname, '../TCL/src/data/characters', charFile), 'utf8'));
   const charName = charData.name;
   const fileName = charFile.replace('.json', '').toLowerCase().replace(/_/g, '-');
   
   // Try to load frame data if it exists
   let frameData = null;
   const frameFile = charFile.replace('.json', '.json');
-  const framePath = path.join(__dirname, '../../src/data/frames', frameFile);
+  const framePath = path.join(__dirname, '../TCL/src/data/frames', frameFile);
   if (fs.existsSync(framePath)) {
     try {
       frameData = JSON.parse(fs.readFileSync(framePath, 'utf8'));
@@ -246,7 +246,7 @@ function determineElement(fileName) {
 
 // Main function
 function generateCharacterMarkdown() {
-  const outputDir = path.join(__dirname, '../../output/characters');
+  const outputDir = path.join(__dirname, '../outputs/characters');
   
   // Create output directory
   if (!fs.existsSync(outputDir)) {
@@ -254,7 +254,7 @@ function generateCharacterMarkdown() {
   }
 
   // Get all character files
-  const charDir = path.join(__dirname, '../../src/data/characters');
+  const charDir = path.join(__dirname, '../TCL/src/data/characters');
   const charFiles = fs.readdirSync(charDir).filter(f => f.endsWith('.json'));
 
   console.log(`Found ${charFiles.length} character files`);

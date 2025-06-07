@@ -1,0 +1,140 @@
+# Sayu
+
+**Main Page:**
+
+[Component removed]
+
+## Basic Sayu Mechanics
+
+[Discussion](https://tickets.deeznuts.moe/ticket-archive/attachments_873816131952070666_878384038103097364_transcript-sayu-basic-mechanics.html)
+
+### Attack Attributes
+
+* New frame data - [Google Sheets](https://docs.google.com/spreadsheets/d/1vLH6ZiAhb7G-f5ecYy-sPLoCdouA5krMixtgh9ITX2Q/edit?usp=sharing) - Kolibri\#7675
+* Gauges
+  * Windwheel roll: 1GU Anemo
+* Energy Generation
+  * Fuufuu Whirlwind Kick generates 2 Anemo Particles. - [Nass008#8577](https://youtu.be/mu5q-BSjOQQ)
+  * Windwheel Roll generates 1 Particle per proc with a 3s ICD for Particle generation. - Nass008#8577
+    * [Part 1](https://youtu.be/QF9skUTnJmY)
+    * [Part 2](https://youtu.be/vrk5D-6fCME)
+    * [Deprecated frame data](https://imgur.com/PKGxrTT)
+  * Sayu can do a hold E into an instant kick for 3 Particles - [DeFault#1802](https://youtu.be/rlztgVXikw4)
+  * Sayu's Particle generation timer on roll does not reset after E is finished. - [DeFault#1802](https://youtu.be/H15YvXdoPB4)
+* Blunt?
+  * Sayu's Roll doesn't Shatter - [Mcpie#8672](https://youtu.be/HawcofVHV6I)
+  * Tap E and Burst don't Shatter (Cast damage and Daruma damage). - [채z#0007](https://youtu.be/p4LjYgzw74Q)
+
+### Skill Mechanics
+
+* Sayu's roll is affected by movement speed buffs. - [Hikaru#8338](https://youtu.be/zlPtLamzvVg)
+* Sayu's roll snapshots [1](https://youtu.be/fM_7247lDqk) [2](https://youtu.be/XrN4D5es3-g) - chae#0720
+* Sacrificial does not proc on hold E Windwheel hits, it can only proc on Fuufuu Whirlwind Kick - [Steph#3614](https://www.youtube.com/watch?v=A_QoytoKyZw)
+* Sayu's Elemental Skill can be used at 0 stamina, and does not consume nor gain any stamina during the roll. - [EdisonsMathsClub#6469](https://www.youtube.com/watch?v=EboCmsXMfIo&feature=youtu.be)
+* Absorption Priority is: Pyro > Hydro > Electro > Cryo - [채z#0007](https://youtu.be/E8hTyByWYF0)
+* If Sayu gets Frozen while rolling, she will still deal Windwheel damage - [Mcpie#8672](https://youtu.be/HawcofVHV6I)
+* Sayu is capable of ice bridging if her roll is infused with Cryo. - [Dunkingson#9351](https://imgur.com/a/gUFyt8Y)
+* Sayu's Hold E follows standard ICD (3-hit/2.5s) - [sigurd#3854](https://youtu.be/ko1xQoItN30)
+* Sayu has separate ICD on Anemo application for her Windwheel Roll and Whirlwind Kick. - [DeFault#1802](https://youtu.be/ssYgLkdNzq8)
+* Sayu Hold E can be cancelled out of by...
+  * Dash Cancelling - [RazorClaws#4343](https://www.youtube.com/watch?v=vwKnua1AOCI)
+  * Jump Cancelling - [RazorClaws#4343](https://www.youtube.com/watch?v=NWDobcF8vpg)
+  * Swapping Characters - [Mcpie#8672](https://i.imgur.com/SUEmTnj.mp4)
+* Sayu's E roll keeps on rolling if you want to answer or write a message. Finally a way to perform "autowalk". Works in coop as well. - [Mcpie#8672](https://i.imgur.com/bbliYsk.mp4)
+* Sayu's roll E kick performs autotarget during unroll. - [Mcpie#8672](https://i.imgur.com/AmJdNSP.mp4)
+* Sayu's roll continues during cinematics. - [Mcpie#8672](https://i.imgur.com/GH6nirt.mp4)
+* Sayu's kick onto a crystal ore will make it require only 3 more hits rather than 4. - [Mcpie#8672](https://i.imgur.com/1OqLOWP.mp4)
+
+### Sayu Release Of Hold Skill Counts As Using Elemental Skill
+
+**By:** \_Maxi\#1776  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]  
+[Discussion](https://tickets.deeznuts.moe/transcripts/sayu-release-of-hold-skill-counts-as-using-elemental-skill)
+
+**Finding:**  
+Ending a continuous Hold Skill (Sayu or Yelan hE as examples) by tapping E is considered "Using an Elemental Skill" for the sake of 4-Piece Crimson Witch Pyro damage bonus. Letting the Skill end naturally does not.  
+
+**Evidence:**  
+* [Sayu Hold Skill (release)](https://youtu.be/pmm2wgmug5M)
+* [Yelan Hold Skill (release)](https://youtu.be/ZJPxex4qw9U)
+* [Sayu Hold Skill (full duration)](https://youtu.be/LJhHfJHWt4k)  
+
+**Significance:**  
+Continuous Hold Skills have higher potential synergy with effects which stack based on "using an Elemental Skill" as they can stack it twice.  
+
+### Burst Mechanics
+
+* Sayu can absorb pre-fed Particles during her Elemental Burst animation - [Nass008#8577](https://youtu.be/bdHedirf9VA)
+  * Works for both Tap and Hold E
+* The summoned Daruma can be pushed around by characters or enemies, also moving its healing/attack range. - [pox#1832](https://www.youtube.com/watch?v=xwFdbiW44Us) and [Mcpie#8672](https://youtu.be/V2C8a2WLugk)
+* Sayu's Elemental Burst snapshots. - [Nass008#8577](https://youtu.be/rK3JGXBc-eo)
+* Sayu's Elemental Burst can reach Venti's ult & hit consistently. - [채z#0007](https://imgur.com/a/QPWqZbh)
+* The Daruma works the same way as Guoba - [Mcpie#8672](https://i.imgur.com/UweRgyV.mp4)
+  * Doesn't light up in Elemental sight, is movable, cannot get infused, etc.
+* Sayu's Burst has separate ICD on her Burst's initial hit and Daruma damage ticks - [DeFault#1802](https://youtu.be/KLy1f8aKkBg)
+  * The summoned Daruma deals 7 ticks of Anemo Damage in a small AoE - [Zakharov#5645](https://imgur.com/a/wyIaelB)
+  * The Daruma Damage ticks follow standard ICD
+  * This means Sayu can Swirl 5 times during her Burst (1 from cast + 4 from Daruma)\
+
+### Sayu Partywide Initial Q Tick
+
+**By:** naivety | pkach\#6934  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]  
+[Discussion](https://tickets.deeznuts.moe/transcripts/sayu-partywide-initial-q-tick)
+
+**Finding:**  
+Sayu's initial Q tick heals all party members.  
+  
+**Evidence:**  
+[YouTube](https://youtu.be/Rr2PrRWWbs0)
+  
+Note Q doesn't have anything to Swirl in the video, meaning this isn't A1 activating \(which is known to be party-wide\).  
+Also note the other Q ticks aren't party-wide, only the initial one is.  
+  
+**Significance:**  
+Better understanding of Sayu's healing.  
+
+### Passive Mechanics
+
+#### Passive: Yoohoo Art: Silencer's Secret
+
+* Passive works even if Sayu is off-field - [Mcpie#8672](https://i.imgur.com/xUpatkg.mp4)
+* If entities are connected (like crystalflies), then picking them up will always scare the others - [Mcpie#8672](https://i.imgur.com/wjFjETt.mp4)
+* If entities do not care about the state of other beings, then picking it up next to another one won't startle them - [Mcpie#8672](https://i.imgur.com/xUpatkg.mp4)
+* Sayu's passive does not affect coop members - works only for your own party - [Mcpie#8672](https://i.imgur.com/i41t4tD.mp4)
+
+### Constellation Mechanics
+
+#### Sayu C2 infused kick
+
+**By:** drunkamphy#7487  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]  
+[Discussion](https://tickets.deeznuts.moe/ticket-archive/attachments_881438570236235786_891207395609554995_transcript-sayu-ball-c2-infused-kick.html)
+
+**Finding:**  
+The stated DMG increase of Fuufuu Whirlwind Kick from Sayu's C2 increases both Anemo Kick Hold DMG and Absorbed Element Kick DMG, by 3.3% every .5s tick
+
+**Evidence:**  
+Using a Sayu with 80/80 R1 Sac GS, no artifacts (713 ATK, 72 em), talent level 1 Skill
+
+In the first video, Sayu rolls at 24s, kicks at 26s, and the resulting ~2s roll deals 752 Anemo and 263 Pyro.  
+In the second video, Sayu rolls at 8s, kicks at 18s, and the resulting ~max length roll deals 1137 Anemo and 398 Pyro.
+
+Rough napkin maths:  
+base Anemo hold kick DMG: 716  
+base absorbed Element kick DMG: 251
+
+2 roll ticks Anemo hold kick DMG: 716 _ (1 + 2 _ 0.033) = 763  
+2 roll ticks abs elem kick DMG: 251 _ (1 + 2 _ 0.033) = 267
+
+20 roll ticks Anemo hold kick DMG: 716 _ (1 + 20 _ 0.033) = 1188  
+20 roll ticks abs elem kick DMG: 251 _ (1 + 20 _ 0.033) = 416
+
+[Video](https://www.youtube.com/watch?v=EeB9czD78KQ)  
+[Video](https://www.youtube.com/watch?v=-nyGLWR1pA0)
+
+**Significance:**  
+Wording clarification.

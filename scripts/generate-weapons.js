@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Import weapon curves
-const weaponCurves = require('../../src/data/weapon_curves.json');
+const weaponCurves = require('../TCL/src/data/weapon_curves.json');
 
 // Helper function to calculate weapon stats at specific level and ascension
 function getWeaponStatsAt(weapon, lv, asc) {
@@ -93,12 +93,12 @@ function cleanRefinementDesc(desc, r1Values) {
 // Process weapons by type
 function processWeaponType(weaponType) {
   const weaponFile = `${weaponType}.json`;
-  const weaponDataObj = JSON.parse(fs.readFileSync(path.join(__dirname, '../../src/data/weapons', weaponFile), 'utf8'));
+  const weaponDataObj = JSON.parse(fs.readFileSync(path.join(__dirname, '../TCL/src/data/weapons', weaponFile), 'utf8'));
   
   // Convert object to array
   const weaponData = Object.values(weaponDataObj);
   
-  const outputDir = path.join(__dirname, '../../output/weapons', weaponType.toLowerCase());
+  const outputDir = path.join(__dirname, '../outputs/weapons', weaponType.toLowerCase());
   
   // Create output directory
   if (!fs.existsSync(outputDir)) {

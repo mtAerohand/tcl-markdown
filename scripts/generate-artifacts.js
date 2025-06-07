@@ -3,12 +3,12 @@ const path = require('path');
 
 // Main function to generate artifact markdown
 function generateArtifactMarkdown() {
-  const artifactsDataObj = JSON.parse(fs.readFileSync(path.join(__dirname, '../../src/data/artifacts.json'), 'utf8'));
+  const artifactsDataObj = JSON.parse(fs.readFileSync(path.join(__dirname, '../TCL/src/data/artifacts.json'), 'utf8'));
   
   // Convert object to array
   const artifactsData = Object.values(artifactsDataObj);
   
-  const outputDir = path.join(__dirname, '../../output/artifacts');
+  const outputDir = path.join(__dirname, '../outputs/artifacts');
   
   // Create output directory
   if (!fs.existsSync(outputDir)) {

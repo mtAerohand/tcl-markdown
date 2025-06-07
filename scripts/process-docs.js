@@ -69,8 +69,8 @@ function processDirectory(inputDir, outputDir) {
 
 // Main function to process documentation
 function processDocumentation() {
-  const docsDir = path.join(__dirname, '../../docs');
-  const outputBaseDir = path.join(__dirname, '../../output');
+  const docsDir = path.join(__dirname, '../TCL/docs');
+  const outputBaseDir = path.join(__dirname, '../outputs');
 
   // Process main categories
   const categories = [

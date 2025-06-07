@@ -11,7 +11,7 @@ const { processDocumentation } = require('./process-docs');
 async function buildMarkdownDocs() {
   console.log('=== TCL Markdown Generator ===\n');
   
-  const outputDir = path.join(__dirname, '../../output');
+  const outputDir = path.join(__dirname, '../outputs');
   
   // Clean output directory
   if (fs.existsSync(outputDir)) {
@@ -54,7 +54,7 @@ async function buildMarkdownDocs() {
 
 // Create main index file
 function createMainIndex() {
-  const outputDir = path.join(__dirname, '../../output');
+  const outputDir = path.join(__dirname, '../outputs');
   
   const indexContent = `# Theorycrafting Library - Markdown Export
 
@@ -96,10 +96,10 @@ This is a plain markdown export of the Theorycrafting Library (TCL) content, sui
 
 ## Data Sources
 
-- Character data: Extracted from \`src/data/characters/\`
-- Weapon data: Extracted from \`src/data/weapons/\`
-- Artifact data: Extracted from \`src/data/artifacts.json\`
-- Documentation: Processed from \`docs/\` directory
+- Character data: Extracted from \`TCL/src/data/characters/\`
+- Weapon data: Extracted from \`TCL/src/data/weapons/\`
+- Artifact data: Extracted from \`TCL/src/data/artifacts.json\`
+- Documentation: Processed from \`TCL/docs/\` directory
 
 Generated on: ${new Date().toISOString()}
 `;

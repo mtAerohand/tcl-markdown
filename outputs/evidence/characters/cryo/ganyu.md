@@ -1,0 +1,675 @@
+# Ganyu
+
+**Main Page:**
+
+[Component removed]
+
+## Basic Mechanics
+
+* Frame data - [Google Sheets](https://docs.google.com/spreadsheets/d/1PDHCZKh-7eWpbE1b0OyQUCzSPHcViYZ22EDEItjiU7Y/edit?usp=sharing) - Kurt\#5846 & Kolibri\#7675
+* Aim mode frame data - [Google Sheets](https://docs.google.com/spreadsheets/d/187T-SngEZUUordjY_K_tF_DdvHjQju9CoBJdp2eJOis/edit?usp=sharing) - BowTae\#0141
+* Burst frame data [Google Sheets](https://docs.google.com/spreadsheets/d/1zCwdd6_KYFqMD4OQ_llGLdDshoZTu_1pmAMysxGDQvs/edit?usp=sharing) - Kolibri\#7675
+
+### Aimed Shot Damage Dropoff
+
+
+
+[Component removed]
+
+## Weapon Mechanics
+
+### Bloom’s Innate Travel Time for Amos’ Bow
+
+**By:** SavageCabbage\#1445  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:**
+
+Bloom has an innate travel time of 0.3s with Amos’ bow. Currently no record of Amos’ bow’s passive dropping below 3 stacks for FFB.
+
+With Ganyu’s C1, the 15% Cryo RES Shred is applied to the FFB of the first shot so long as FFA hits.
+
+**Evidence:**
+
+Tested with Ganyu, no artifact, R1 Amos, c6 and level 8 talent. consistent 889 DMG with 2090 Bloom in the first video. After the initial charged shot, the resulting Bloom DMG did not change at close range meaning that the Cryo shred was applied to the first Bloom. by running maths, we found out that the Bloom has 0.3 travel time. \(204.8% x 1.12 x 0.9\)/\(348.16% x \(1.12 + 0.24\) x 1.025\) = 889/2090.
+
+[Video 1](https://youtu.be/j1wfYTOYkDQ); [Video 2](https://youtu.be/JdyEOE2zECI)
+
+**Significance:**
+
+Ganyu synergises well with Amos’ Bow. C1 is slightly better due to the finding.
+
+### Viridescent Hunt’s Passive Can Activate off of Bloom
+
+**By:** Kidz\#8667  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:**
+
+Regardless of whether both the initial and the Bloom of Ganyu’s Charged Attack hit the enemy, Viridescent Hunt’s passive has been found to be activatable by both instances. Additionally, because both the arrow and the Charged Attack can trigger Viridescent Hunt’s passive, the 50% chance of activation is rolled twice if both the arrow and the Bloom hit the enemy.
+
+**Evidence:**
+
+User Kidz\#8557 tested for Viridescent Hunt triggers by purposefully missing the initial shot during testing in order to only hit the enemies with the Bloom, and sure enough despite the initial arrow completely missing, Ganyu’s Bloom still triggered Viridescent Hunt’s passive
+
+[Viridescent hunt passive Bloom test](https://youtu.be/rZfloO3kVx4)
+
+**Significance:**
+
+Due to the fact that Viridescent Hunt can trigger on both the Bloom or the arrow this means that on average Viridescent Hunt’s passive has a 75% chance at triggering with refinement 1 when users hit a target with both the Bloom and the arrow, meaning that Viridescent Hunt is theoretically more consistent on Ganyu than other characters.
+
+### Specific Distances Required for Each Stack of Amos’ Buff
+
+**By:** Shinku\#8903  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:**
+
+The distance required in order to get an individual stack of the Amos’ passive buff of 8% DMG bonus per 0.1 seconds of travel time is approximately 5 in game meters per stack with the first stack applying at a distance of 3 in game meters. For reference, to get maximum stacks with the Amos bow, the distance is approximately half of Ganyu’s Elemental Burst in length.
+
+**Evidence:**
+
+User Shinku used the training dummy daily commission along with a world quest as a marker for distance, \(starting at 544m away from said marker at point blank range\), and subsequently tested the distance required for each stack by measuring his total distance away from the marker, and then tracking how many meters he had to travel before the next stack of Amos proc’d. He in turn found the following values.
+
+[\[video\] Amos bow stack range test](https://www.youtube.com/watch?v=aAvIn0cB3qg&feature=youtu.be)
+
+544m is our 0, 1769 is our damage without stacks.
+
+547m damage changes to 1896, first stack \(3m\)
+
+552m damage changes to 2022, second stack \(8m\)
+
+557m damage changes to 2149, third stack \(13m\)
+
+562m damage changes to 2275, fourth stack \(18m\)
+
+567m damage changes to 2409, fifth stack \(23m\)
+
+580 damage falloff gives 2161 \(36m\)
+
+**Significance:**
+
+These distance calculations will allow for players to have a better understanding of how much distance is required to get maximum stacks of Amos’ Bow’s passive, instead of having to just guess how far they need to be from their target.
+
+## Charged Attack Mechanics
+
+### Bloom Damage Scales with Charged Attack DMG Bonus
+
+**By:** That’s so Poyo\#6921  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:**
+
+The Bloom damage from Ganyu’s Frostflake Arrow is considered to be a Charged Attack along with the initial arrow itself, meaning that both the Bloom and the arrow are affected by Charged Attack multipliers such as the ones received from 4-Piece Wanderers Troupe, Bolide, and Heart of Depth.
+
+**Evidence:**
+
+User Poyo tested Ganyu’s Frostflake Arrow with the 4-Piece Wanderers Troupe set, then swapped out a piece of the set with similar sub stats to test if there would be a significant damage difference in Bloom damage between having the 35% charge ATK Bonus, and not. The following findings show that there is indeed a significant damage difference when equipping the 4-Piece Wanderer’s Troupe set, implying that the Bloom is considered a Charged Attack, and is in turn affected by Charged Attack multipliers.
+
+[Wanderer Troupe Bloom damage test](https://youtu.be/b2F6swCa4pI)
+
+**Significance:**
+
+This finding means that set bonuses that improve Charged Attacks such as Wanderers Troupe, Bolide, and Heart of Depth, will have a significant boost to Ganyu’s Bloom damage, implying that Ganyu will have significantly more potential options for viable sets then we initially thought.
+
+### Ganyu Cannot Perform the ARCC Tech That All Other Bow Users Can Perform With Her Frostflake Arrow \(with the exception of C6\)
+
+**By:** SavageCabbage\#1445  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:**
+
+Ganyu is unable to perform the ARCC tech with her Frostflake Arrow meaning that she cannot benefit from the frame advantages that a majority of the bow users gain when using their respective charged shots.
+
+**Evidence:**
+
+User SavageCabbage tested out trying to perform the ARCC tech with Ganyu’s Frostflake Arrow, which resulted in the arrow reverting back to a non-Elemental aimed shot, meaning that it is not possible to perform the ARCC tech with Ganyu’s charged shot.
+
+[ARCC tech test](https://youtu.be/0QUL-yOl_CY)
+
+**Significance:**
+
+With this knowledge we now know that there is no potential frame advantage from attempting to perform the ARCC tech with Ganyu’s charged attack, meaning that there is significantly less room for improvement for individual players in terms of animation cancels that they would need to learn.
+
+### Frostflake Bloom Hitbox Range
+
+**By:** Kidz\#8667 SavageCabbage\#1445 Pinupski\#9999  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:**
+
+Damage from FFB is applied in a cylinder relative to the impact point of the FFA. Regardless of vertical distance from the impact point of the FFA the damage is applied to all units inside the AoE on the same frame. Relative to the animation, the AoE cylinder extends further down than the animation suggests and also slightly above the apex of the FFB animation.
+
+**Evidence:**
+
+Same frame damage regardless of vertical, same frame can be deduced from the opaqueness and size of the damage numbers:[ Image 1](https://imgur.com/aZOSvw1);
+
+Upper limit of AoE and its radius shown by upper hilichurl:[ Image 2](https://imgur.com/tWsQ0tt);
+
+Upper limit of AoE and its radius shown by upper hilichurl:[ Image 3](https://imgur.com/DJeNbIC);
+
+Lower Limit of AoE shown by bottom hilichurl:[ Image 4](https://imgur.com/m4nPtqv);
+
+FFB Radius shown by hilichurl behind the 5:[ Image 5](https://imgur.com/19rl8xK).
+
+**Significance:**
+
+Plots out the AoE of the FFB and show that the FFB damage is being applied to all mobs in the AoE at the same frame.
+
+### Charged Shot Arrow Deviation When Aiming Near Objects
+
+**By:** qwertyasdf007\#9101  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:**
+
+**Theory:** Charged Shot originates at the bow and targets the frontmost object in the reticle line of sight.
+
+Subtheory: Collision detection hitboxes are wonky for some objects seen in the video \(e.g. thorns\).
+
+**Evidence:**
+
+* First clip supports the fact that the charge shot originates at the bow.
+* Second and third clip support the fact that the charge shot is aimed toward some object in the reticle line of sight.
+* Fourth clip makes the distinction that the charge shot is aimed toward the frontmost object.
+
+[Bow Character Charge Shot Aim Deviation](https://youtu.be/ao-3MVbnRhY)
+
+Given that if the theory is correct, then the subtheory is supported by the fact that in clips 2-4 the charge shot is targeting something in front of the "first" object in the reticle line of sight. This seems to imply that the "aim shot" hitbox is different from the actual hitbox for collision detection.
+
+**Significance:**
+
+Some objects provide strange interactions when aiming charge shots. As the bow character is to the left of the reticle, the released charge shot will be:
+
+* to the left of the reticle when the arrow is in front of the target;
+* to the right of the reticle when the arrow is behind the target.
+
+For moving targets, as they move toward you, the target is closer to the character than where the target was originally. In this case, the arrow will be to the left of the target, and potentially miss. It's better to aim toward the right edge of the target. Arrow deviation will be increased the closer the target is.
+
+Special thanks to SavageCabbage\#1445 for founding this theory and discussing its significance.
+
+### Airspeed Velocity Of An Unladen Frostflake Arrow
+
+**By:** Rare Possum\#0511  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]  
+[Discussion](https://tickets.deeznuts.moe/transcripts/airspeed-velocity-of-an-unladen-frostflake-arrow)
+
+**Finding:**  
+Ganyu's Fully Charged Frostflake Arrow has an Airspeed Velocity of approximately 55 m/s.  
+  
+**Evidence:**  
+* 8 Abyss Tiles: [YouTube](https://youtu.be/m4BdPoaS4GY)  
+* 2 Abyss Tiles: [YouTube](https://youtu.be/M8qYk9R8w30)  
+* 4 Abyss Tiles: [YouTube](https://youtu.be/NeVAvHzL7b8)  
+* 6 Abyss Tiles: [YouTube](https://youtu.be/ap3Oeqf9NFw)  
+* Calculations: [Google Sheets](https://docs.google.com/spreadsheets/d/1FDx-Uj01_d9QgpnnQA0ktn_G953yhvS7hddkPU6nZ_Y/edit?usp=sharing)  
+  
+**Significance:**  
+Amos Stacks.  
+
+## Skill Mechanics
+
+### C0 Ganyu: 2 Simultaneous Ice Lotuses
+
+**By:** Exuma\#1917 and JenjenJL\#6582  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]  
+[Discussion](https://tickets.deeznuts.moe/ticket-archive/attachments_846678238796316683_854985101988593694_transcript-c0-amber-2-simultaneous-baron-bunnies.html)
+
+**Finding:**  
+Two Ice Lotuses can exist simultaneously on C0 Ganyu.
+
+**Evidence:** [Video](https://youtu.be/i7Pe0-WeQBo)
+
+**Significance:**  
+It is possible to spawn multiple Ice Lotuses without C2 Ganyu.
+
+### Ganyu Elemental Skill has no ICD
+
+**By:** TWICE\#9958  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]  
+[Discussion](https://tickets.deeznuts.moe/ticket-archive/attachments_929894901469032499_930085706393600060_transcript-ganyu-e-icd.html)
+
+**Finding:**  
+Ganyu E does not have ICD.
+
+**Evidence:**  
+[YouTube](https://youtu.be/NTwGHl6XA8I) - Ganyu equipped with Sacrificial Bow. Applied 2U of Pyro to the Fatui Agent using Bennett's Skill. Used Ganyu Skill twice using Sac Bow passive, both hits melted. First damage instance appears at frame 455, second at frame 530 => 1.25 seconds between damage, which is less than the standard 2.5 seconds.
+
+**Significance:**  
+Provides evidence for "ICD: None" on TCL for Ganyu's Skill.
+
+### Ganyu’s Trail of Qilin can taunt every enemy in the game that is not considered a boss monster
+
+**By:** TiagoESC\#6773  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:**
+
+Against just about every single normal enemy in the game, Ganyu’s Trail of Qilin \(E\) has been shown to properly taunt the various enemies. The enemies that were included in testing are: Abyss mage, Slime, Boar King, Cryo Cicin Mage, Electro Cicin Mage, Geovishap Hatchling, Ruin Guard, Ruin Hunter, Hili/Samachurl, Lawachurl, Mitachurl, Pyro Agent, Electro/Hydro Skirmishers, Pyro Skirmisher and \(Cryo\) Whopperflower.
+
+**Evidence:**
+
+User Tiago thoroughly tested Ganyu’s Trail of Qilin by going to each individual enemy in the game \(except for eye of the storm and bosses\) and activating Ganyu’s E ability to see if the taunt would work against said enemy. The result showed that against every single enemy that was tested against, Ganyu’s Trail of Qilin was able to taunt the enemy as intended.
+
+[Ganyu taunt test](https://www.youtube.com/watch?v=yf6G876K_s4)
+
+**Significance:**
+
+As Ganyu’s Trail of Qilin is capable of properly taunting just about every single enemy in the game it will prove to be a highly valuable asset in crowd control for Ganyu players, especially in Melt comps due to it attracting enemies near Xiangling’s Guoba, along with being a major asset for abyss 11-2.
+
+### Ganyu Construct Height Placement Shenanigans
+
+**By:** Empyress\#9451  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]  
+[Discussion](https://tickets.deeznuts.moe/ticket-archive/attachments_945097851195777054_962026867236417586_transcript-zl-and-ganyu-construct-height-placement-shenanigans.html)
+
+**Finding:**  
+Ganyu's Ice Lotus placement seems to have a specific height difference past which it will be placed mid-air.
+
+**Evidence:**
+
+* [Video demonstration](https://www.youtube.com/watch?v=jha55PFx5iQ)
+* [Testing location](https://imgur.com/OkrAhHn)
+* [Height reference](https://imgur.com/RvbWdsJ)
+
+**Significance:**  
+Knowing more about construct spawn conditions at different heights.
+
+## Burst Mechanics
+
+### Icicle drop frequency of Ganyu’s Q
+
+**By:** TiagoESC\#6773  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:**
+
+Ganyu’s Q creates 50 icicles in 15 seconds, or 1 every 0.3 seconds.
+
+**Evidence:**
+
+Shard hit the ground in a 18 frame interval \(at 60 FPS\) or 9 frames in 30 FPS.
+
+[Icicle drop counting](https://youtu.be/RRHQGWOG-jg)
+
+**Significance:**
+
+Knowing the number of icicles during Ganyu’s Q will help with other findings like Icicle ICD.
+
+### Icicle Internal Cooldown in Ganyu’s Burst
+
+**By:** Artesians\#0002  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:**
+
+Ganyu’s Q, Celestial Shower, drops an icicle on a random enemy that has not been targeted by an icicle in the last 4 icicle drops. The icicles drop randomly among "legal" targets, which are defined as enemies that have not been targeted by the last 4 icicle drops. If there are no legal targets, they will drop on the ground, where the AoE can still strike a target.
+
+**Evidence:**
+
+User Artesians\#0002 walked into F12 and up to the Hypostasis, used Ganyu’s Q, and counted the frames it took for an icicle to spawn above an enemy:
+
+[Ganyu's Q against an isolated enemy in a group](https://imgur.com/a/BqGoWe2)
+
+In the video, the icicle spawns at frames: 603, 710, and 818.
+
+107/60 = 1.783s
+
+108/60 = 1.8s
+
+It was tested against the Hypostasis, and it took again 108 frames exactly for an icicle to spawn above it; however, these results were later disproved by other clips and testing where an ICD was seemingly 1.5s.
+
+Thus, a series of experiments were conducted on groups of 1, 5, 6, and 7 enemies within Ganyu ultimate. At around 10 seconds, a hilichurl breaks out from the pack and 4 icicles are dropped randomly amongst the 6 other targets, but he is struck again by the 5th icicle:
+
+[Ganyu's Q against several enemies](https://i.imgur.com/7A8CyST.mp4)
+
+Difficult to count the icicles initially, but 4 icicles are dropped on the ground before one strikes the Fatui:
+
+[Ganyu's Q against 1 enemy](https://i.imgur.com/Sg3kqs8.mp4)
+
+**Significance:**
+
+Ganyu's Q is really bad against single-target enemies for Cryo application. Her Cryo application really shines when you can abuse the fact that the icicles have separate Cryo applications on enemies that are grouped.
+
+### Ganyu’s Ascension 4 and Constellation 4 Effects Carry Over on Consecutive Casts of Ganyu’s Elemental Burst
+
+**By:** SavageCabbage\#1445 TiagoESC\#6773  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:**
+
+On subsequent casts of Ganyu’s Celestial Shower, if done in quick succession \(immediately after the cooldown generally\), Ganyu’s ascension 4 will actually trigger for the Elemental Burst unlike in the initial cast, and furthermore; Ganyu’s constellation 4 debuff will carry over to any enemy that is currently in the Elemental Bursts aura.
+
+**Evidence:**
+
+Users SavageCabbage and Tiago did some testing of Ganyu’s Elemental Burst by casting the Burst in succession against a Cryo Regisvine, and a group of slimes respectively in order to test for both C4 and non C4 interactions. The result of which showed that after initial casting, both ascension 4 and constellation 4 were able to carry over providing additional damage for Ganyu.
+
+[Video 1](https://youtu.be/_QN_X8ptbTw); [Video 2](https://youtu.be/ao8XpqoNGx8); [Video 3](https://youtu.be/qxrIiqGlRI4)
+
+**Significance:**
+
+This finding implies that Ganyu’s overall Elemental Burst damage spikes significantly if done off-cooldown due to A4 being able to go into effect if the Elemental Burst is cast in quick succession. This in turn greatly improves the value of constellation 1, minorly improves the value of constellation 4, and makes Ganyu’s ascension 4 talent even better than it already is.
+
+## Ascension Mechanics
+
+### A1: Undivided Heart
+
+#### Ganyu’s A1 Passive Does Not Apply to the Initial Bloom
+
+**By:** SavageCabbage\#1445  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:**
+
+Ganyu’s A1 Passive does not apply to itself. Meaning the Bloom from the first Frostflake Arrow arrow shown within 5 seconds will not have an increased CRIT Rate
+
+**Evidence:**
+
+Tests were run by user SavageCabbage with Ganyu at 80% CRIT Rate on their artifacts. Due to this, if Ganyu’s A1 Passive applies to itself they would never experience a non-critical Bloom during testing, which was not the case.
+
+[Ascension 1 passive test](https://youtu.be/FHx_KToeyWU)
+
+**Significance:**
+
+This knowledge allows for a clearer understanding of her talents, and implies that for shorter fights Ganyu will be marginally weaker at the start of the fight due to her first shot not having the A1 Passive.
+
+#### Ganyu’s A1 Passive Persists After Swap
+
+**By:** Nello\#1928  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:**
+
+Ganyu’s A1 Passive persists after swapping characters, meaning that it is possible to maintain the 20% CRIT Rate from A1 while swapping to supports to activate their abilities and Elemental Bursts as long as the swap time is within the 5 second period. \(Note: the CRIT Rate increase does not apply to others\).
+
+Additionally, Buffs applied to the character after an arrow has been released are not added to the fired arrow. The arrow's damage is “snapshot” from the state of the character when released.
+
+With these two things in mind, as long as the FrostFlakeArrow is fired within 5 seconds of the previous arrow regardless of what you do during this timeframe the 20% additional CRIT buff is maintained.
+
+**Evidence:**
+
+The activation of the A1 Passive is visible after Ganyu shoots a Frostflake Arrow \(as can be seen from the yellow visual effect around Ganyu\) and the effect persists after swap:
+
+[A1 Passive swap test](https://youtu.be/G_4Jn1xxwG0)
+
+After shooting an arrow, moving inside/outside Bennett’s Burst does not change the damage dealt by arrows previously released, therefore arrows do not dynamically update buffs, they keep the same state after being fired:
+
+[Arrow snapshot test](https://youtu.be/moPAMaH9LMo)
+
+**Significance:**
+
+This proves that it is possible to use other character’s Elemental Bursts and/or Skills while maintaining Ganyu’s 20% CRIT Rate buff which both improves her viability by making her significantly less of a selfish carry, and allows for potential usage \(although overall probably not optimal\) in swap comps with Ganyu.
+
+### A4: Harmony Between Heaven and Earth
+
+#### Ganyu’s Ascension 4 Passive Will Not Apply to the First Elemental Burst Cast
+
+**By:** SavageCabbage\#1445  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:**
+
+Ganyu’s Elemental Burst will not apply the 20% bonus Cryo damage from its initial cast to itself, regardless of if the user stands inside or outside of the Elemental Burst post casting, implying that Ganyu’s Elemental Burst is snapcast in nature.
+
+**Evidence:**
+
+User SavageCabbage tested out using Ganyu’s Elemental Burst on a group of enemies and recorded the damage values he received. After this, he took said recorded values and inputted them into the damage formula to determine if the values he observed matched the values he would theoretically be receiving with the 20% damage buff.
+
+[\[Video\] A4 test on Elemental Burst](https://youtu.be/YGa-IZl0rFI)
+
+[Image](https://imgur.com/a/qsPadc6)
+
+**Significance:**
+
+These findings are important for Ganyu players to know as their Elemental Bursts will deal less damage then they might assume on paper due to the common misconception that Ganyu’s ultimate is not snapcast in nature. Along with this due to the fact that the 20% bonus Cryo damage will apply if you Burst off of cooldown further incentivises players to do so.
+
+### Ganyu Elemental Burst and Charge Shots Snapshot
+
+**By:** Karzak\#7126 Nello\#1928 Neptunya\#8291  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:**
+
+Both Ganyu’s Frostflake Arrow \(on release\) as well as Ganyu’s Elemental Burst \(on initial cast\) are snapshot in nature, meaning that any buffs or effects applied to the character will only affect them if they are on Ganyu during the initial release, and cast respectively
+
+**Evidence:**
+
+User Neptunya tested Ganyu’s Elemental Burst by casting it along with a Bennett ult, varying between being inside the Bennett ult during cast, walking into the Bennett ult after cast, and not being in the Bennett ult whatsoever in order to determine if Ganyu’s Elemental Burst was snapshot in nature, which she found to be true. Similarly, user Nello tested Ganyu’s charge shot by shooting a hilichurl at extreme distances in order to give them enough time to walk in and outside of a Bennett ult mid shot. Through this they similarly discovered that Ganyu’s Frost Flake arrow is also snapshot in nature.
+
+[Ganyu charge shot snapshotting](https://youtu.be/moPAMaH9LMo)
+
+[Ganyu Burst alone](https://youtu.be/1xaxk0roVIc)
+
+[Ganyu Burst outside of Bennett buff](https://youtu.be/XHrFKkFXjAc)
+
+[Ganyu Burst inside of Bennett buff](https://youtu.be/ryO1Umsa6po)
+
+**Significance:**
+
+By the fact that both Ganyu’s CA and Elemental Burst are snapshot in nature, we now have a better understanding of how Bennet’s Elemental Burst interacts with Ganyu’s abilities, which in particular is very important to know for Melt comp, and even to an extent can be decently important for a Ganyu Freeze comp if they decide to run Bennett for the extra damage.
+
+### Ganyu Burst does not Overlap
+
+**By:** EdisonsMathsClub\#6469  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:** Ganyu's ultimate cannot be duplicated or have 2 on the field at the same time
+
+**Evidence:**  
+[YouTube](https://youtu.be/DhojXoaJfLU)
+
+1. Slap on massive CDR via Chong's C2, Anemo Resonance, and a -20% CDR abyss card
+2. Ult repeatedly off cooldown
+3. Test whether casting inside her ultimate allows it to coexist
+4. Test whether casting outside of her ultimate field, but have the 2nd one overlap the ultimate, allows it to coexist
+5. Test whether casting completely outside her ultimate field allows it to coexist
+
+**Significance:**  
+In a scenario where Ganyu has lots of cooldown reduction to the point where you can cast her Burst before it ends, it is advised to wait until it has ended to cast her Burst again.
+
+### Ganyu Burst Frequency
+
+**By:** Yukarix#6534, Greyhound#7836  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]  
+[Discussion](https://tickets.deeznuts.moe/ticket-archive/attachments_845508390595592202_857719631568961536_transcript-ganyu-ult-frequency-enemy-size.html)
+
+**Finding:**  
+Ganyu's rng ult icycles are more likely to hit a target(beyond the base 10) if they are larger in size (who'd have thought :keqewide: ) up to all 50 for enemies large enough such as Azhdaha
+
+**Evidence:**  
+Azhdaha 50 hits: [Video](https://www.bilibili.com/video/BV13N411Z7JM#reply4609628931)  
+Hilichurl 13/11/16/11/16/14 hits: [Video](https://www.youtube.com/watch?v=Q9o8kJpU-5Q)  
+Humanoid 11/12/10/13/10 hits: [Video](https://www.youtube.com/watch?v=OsArJAXUBsI)  
+Fat Fatui 14/12/12/11/15/14 hits: [Video](https://www.youtube.com/watch?v=sCqHL1BjkBU)  
+Geo Vishap 20/19/23/25/22/18 hits: [Video](https://www.youtube.com/watch?v=TOjnzXt-Thg)  
+Primo Vishap 25/24/23/24/19/26/22/23/21 hits: [Video](https://www.youtube.com/watch?v=CLAbZ-wppuE)  
+Geo Lawachurl 14(ran outside)/17/18/16/17 hits: [Video](https://www.youtube.com/watch?v=k6aLvC-MKKM)  
+Mitachurl 12(ran outside)/18/17/14/15/19 hits: [Video](https://www.youtube.com/watch?v=GvOIpAR70wE)  
+Ruin guard 18/19/21/21/23/28 hits: [Video](https://youtu.be/SLCT8oQaDX4)
+
+**Significance:**  
+Ganyu's ult is better than expected
+
+## Constellation Mechanics
+
+### C1: Dew-Drinker
+
+#### Constellation 1’s Cryo Resistance Shred Will Apply to the First Shot’s Bloom
+
+**By:** Karzak\#7126  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:**
+
+When shooting your first Frostflake Arrow at an enemy if you hit the enemy directly with the arrow, the initial Bloom of the shot will get the bonus 15% Cryo resistance shred
+
+**Evidence:**
+
+User Karzak tested this interaction by intentionally missing the first arrow and only hitting the enemy with a Bloom, and compared that damage to when they shot the enemy with both the arrow and the Bloom, finding that the Bloom's damage increased slightly when the enemy was hit with the initial arrow first. ALong with this, they also noticed that the debuff arrows that surround the enemy started appearing after the initial hit, rather than from the Bloom hit.
+
+**Significance:**
+
+The 15% Cryo resistance shredding from Ganyu’s constellation 1 is slightly better during short encounters as the enemy will get the resistance shred applied to the first Bloom.
+
+#### Ganyu’s Constellation 1 Generates Energy Without Dealing Damage
+
+**By:** Pinupski\#9999  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:**
+
+Ganyu can regenerate Energy through her C1 passive ability even when shooting immune enemies.
+
+**Evidence:**
+
+Slimes are immune to Cryo and therefore take no damage. Despite taking no damage, it can be seen in the video below that C1’s passive is functioning:
+
+[Video](https://youtu.be/8uAy2OJtZEw)
+
+**Significance:**
+
+It can be useful to know that even in the event of immunity or resistance you can still generate Energy from a FFA/B.
+
+### C6: The Clement
+
+#### ARCC Shot Tech is Doable Only With Ganyu’s Constellation 6
+
+**By:** SavageCabbage\#1445  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:**
+
+You can perform an ARCC shot with Ganyu only if you have Ganyu’s constellation 6 and have an instant charged shot primed.
+
+**Evidence:**
+
+[ARCC shot test with C6](https://youtu.be/0WybWgbd4UQ)
+
+**Significance:**
+
+Allows for quick execution of charged shot -&gt; e -&gt; charged shot -&gt; e -&gt; charged shot combo.
+
+## Miscellaneous
+
+### Ganyu’s E Can Trigger Small Pressure Plates
+
+**By:** TiagoESC\#6773  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:**
+
+Ganyu’s Trail of Qilin is classified as a construct similar to Amber’s bunny, and all of the Geo character’s constructs. As such, her Trail of Qilin can function as a trigger for smaller pressure plates which can help in exploration
+
+**Evidence:**
+
+User Taigo tested by placing Ganyu’s Trail of Qilin on a large pressure plate where it was shown to be able to trigger half of the plate, implying that the construct’s weight is equal to that of Ambers bunny and can trigger either a small pressure plate, or half of a large one.
+
+[Ganyu E pressure plate test](https://www.youtube.com/watch?v=YOpFt1R2OWY)
+
+**Significance:**
+
+With this in mind, Ganyu is potentially a better character to use for exploration as she can fill the niche of a pressure plate activator, especially if the player has access to constellation 2 giving them a second charge of Trail of Qilin.
+
+### Ganyu’s Bloom from Frostflake Arrow is Considered a Projectile and Can Headshot
+
+**By:** Karzak\#7126 SavageCabbage\#1445  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:**
+
+The Frostflake arrow’s Bloom although at first glance would appear to be a separate ability unable to headshot or trigger weak points, after further investigation proved that in certain scenarios it is actually possible to trigger weak points with the Bloom, in turn activating Prototype Crescents buff.
+
+**Evidence:**
+
+User SavageCabbage noticed that they at one point accidentally managed to trigger the prototype crescent’s boost without hitting the enemy with their initial arrow. After discussing this finding with user Karzak, after further testing they discovered that the Bloom indeed was considered a projectile, and had the capability \(although very unrealistic in practice\) to headshot.
+
+[Ganyu Bloom weak point hit](https://youtu.be/W8iWHv0tcp4)
+
+**Significance:**
+
+In practice when using the Prototype Crescent it is very possible to accidentally get a passive proc from the bow.
+
+### Ganyu can provide an ice bridge via her charged shots
+
+**By:** Cola\#6861  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+**Finding:**
+
+Ganyu’s Frostflake arrow when shot on water applies the ice effect for long enough to allow for a 2nd charge shot to be used, in turn allowing for Ganyu to make an icebridge.
+
+**Evidence:**
+
+User ColaSen tested shooting Frostflake Arrow arrows repeatedly to try and travel across water and found that there was just enough time to be able to build a constant bridge if you are fast enough with your Frostflake arrows.
+
+[Ice bridge building](https://youtu.be/UOwOaSW7bt4)
+
+**Significance:**
+
+Ganyu is a decent character when attempting to travel across water as her Frostflake Arrows has no cooldown unlike abilities which will theoretically allow for faster overall travel across water.
+
+### Unlimited Ganyu Works
+
+**By:** Pinupski\#9999  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]
+
+The culmination of all Ganyu macro-related testing and iteration since release. Now compiled into one mostly comprehensible document.
+
+* [Google Doc](https://docs.google.com/document/d/e/2PACX-1vSMDSJ_Jbb0tzTtWsZWkfxVBTLOPwOv66EmzOV_J30Ppi7lh9OsgpiWmRvMM_Y-7C6Ym25V0uzJQIXl/pub)
+* [Unlimited Ganyu Works: The Movie](https://youtu.be/vYTy9lNnVEw)
+
+**Finding:** Most optimal/reliable timings for Ganyu rotations tested and verified via macro.
+
+* Example tech macros for C6 E FFA Instacast, Quickshot and Aimcast variants.
+* Example tech for standalone Quickshot.
+
+**Significance:**  
+Mostly so close in timings that there's not a huge difference for normal players to use one over the other, preference should be given to whatever's most reliable/comfortable.
+
+**Significance:**  
+QoL and DPS increase to fluidly execute all as one motion.
+
+### Sacrificial Passive With Multiple E Stacks \(Ganyu C2\)
+
+**By:** mol\#3280  
+**Added:** [Component removed]  
+**Last tested:** [Component removed]  
+[\[Discussion\]](https://tickets.deeznuts.moe/ticket-archive/attachments_837514129479827490_840052397882867752_transcript-sac-frags-reset-on-sucrose-c1.html)
+
+**Finding:**  
+When C1 Sucrose has both stacks of E down, a sacrificial fragments proc will reset the cooldown showed by the timer on E.
+
+**Evidence:**  
+_Streamable Video lost to the sands of time_  
+I cast one Sucrose E, waited until the first cooldown was down to 5s, and cast the second E. A reset occurred, and the time of the second cooldown was ~15s (minus 10% due to Anemo resonance in video). So, whatever timer is currently showing is the one which will be reset.
+
+**Significance:**  
+Unlike Sacrificial-type-weapon users with single-cast Skills, any serial-cooldown, multi-cast Skill user may waste cooldown resets by causing a reset when their first cooldown is near 0s. Since the timer on stacked Skills begins with the first Skill cast out of the stack, and that Skill is the one which is reset (not the longer, still waiting cooldowns), resets can be completely wasted on characters with multiple stacks. For example, with Sucrose it is possible to reset a Skill with 0.1s of cooldown remaining, then have a stack of 15s go onto cooldown afterward. To get the most out of the cooldown benefit of sacrificial weapons, characters with multiple stacks might consider using stacks as quickly as possible.

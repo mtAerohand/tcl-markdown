@@ -148,8 +148,8 @@ function compareContent(htmlData, mdData, filePath) {
 async function compareOutputs() {
   console.log('=== TCL Output Comparison Tool ===\n');
   
-  const buildDir = path.join(__dirname, '../../build');
-  const outputDir = path.join(__dirname, '../../output');
+  const buildDir = path.join(__dirname, '../TCL/build');
+  const outputDir = path.join(__dirname, '../outputs');
   
   // Check specific files for comparison
   const comparisons = [
@@ -236,7 +236,7 @@ async function compareOutputs() {
   }
   
   // Save detailed report
-  const reportPath = path.join(__dirname, '../../output/comparison-report.json');
+  const reportPath = path.join(__dirname, '../outputs/comparison-report.json');
   fs.writeFileSync(reportPath, JSON.stringify(reports, null, 2));
   console.log(`\nDetailed report saved to: ${reportPath}`);
 }

@@ -5,8 +5,8 @@ const path = require('path');
 function verifyContent() {
   console.log('=== Content Verification Report ===\n');
   
-  const outputDir = path.join(__dirname, '../../output');
-  const srcDataDir = path.join(__dirname, '../../src/data');
+  const outputDir = path.join(__dirname, '../outputs');
+  const srcDataDir = path.join(__dirname, '../TCL/src/data');
   
   // 1. Verify Character Data
   console.log('1. CHARACTER DATA VERIFICATION');

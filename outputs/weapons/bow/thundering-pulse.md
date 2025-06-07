@@ -1,0 +1,28 @@
+# Thundering Pulse
+
+**Type:** Bow
+**Rarity:** 5★
+
+## Stats
+
+| Level | Base ATK | Secondary Stat |
+| :--- | :--- | :--- |
+| 1/20 | 46 | CRIT DMG: 14.4% |
+| 20/20 | 122 | CRIT DMG: 25.4% |
+| 20/40 | 153 | CRIT DMG: 25.4% |
+| 40/40 | 235 | CRIT DMG: 37.1% |
+| 40/50 | 266 | CRIT DMG: 37.1% |
+| 50/50 | 308 | CRIT DMG: 42.9% |
+| 50/60 | 340 | CRIT DMG: 42.9% |
+| 60/60 | 382 | CRIT DMG: 48.7% |
+| 60/70 | 414 | CRIT DMG: 48.7% |
+| 70/70 | 457 | CRIT DMG: 54.5% |
+| 70/80 | 488 | CRIT DMG: 54.5% |
+| 80/80 | 532 | CRIT DMG: 60.3% |
+| 80/90 | 563 | CRIT DMG: 60.3% |
+| 90/90 | 608 | CRIT DMG: 66.2% |
+
+## Refinement: Rule by Thunder
+
+Increases ATK by **20%**/**25%**/**30%**/**35%**/**40%** and grants the might of the Thunder Emblem. At stack levels 1/2/3, the Thunder Emblem increases Normal Attack DMG by **12/24/40%** / **15/30/50%** / **18/36/60%** / **21/42/70%** / **24/48/80%**. The character will obtain 1 stack of Thunder Emblem in each of the following scenarios: Normal Attack deals DMG (stack lasts 5s), casting Elemental Skill (stack lasts 10s); Energy is less than 100% (stack disappears when Energy is full). Each stack's duration is calculated independently.
+

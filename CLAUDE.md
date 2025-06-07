@@ -71,3 +71,4 @@ The scripts handle removal of:
 - Generated outputs are not committed to avoid bloat
 - GitHub Actions automatically sync and generate exports daily
 - The workflow tracks last synced commit to prevent redundant runs
+- Scripts have been configured to use the correct paths for this project structure
