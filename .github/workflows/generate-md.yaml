@@ -27,7 +27,7 @@ jobs:
         run: |
           # TCLサブモジュールの上流リポジトリの最新コミットを取得
           UPSTREAM_REPO="KQM-git/TCL"
-          LATEST_COMMIT=$(curl -s https://api.github.com/repos/$UPSTREAM_REPO/commits/main | jq -r '.sha')
+          LATEST_COMMIT=$(curl -s https://api.github.com/repos/$UPSTREAM_REPO/commits/master | jq -r '.sha')
           
           # 現在のサブモジュールのコミットを取得
           cd TCL
@@ -49,8 +49,8 @@ jobs:
         run: |
           cd TCL
           git fetch origin
-          git checkout main
-          git pull origin main
+          git checkout master
+          git pull origin master
           cd ..
           
           # サブモジュールの更新をコミット
