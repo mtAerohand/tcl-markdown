@@ -1,0 +1,91 @@
+name: Generate markdown from TCL documentation
+
+on:
+  schedule:
+    # 毎日午前2時（UTC）に実行
+    - cron: '0 2 * * *'
+  workflow_dispatch:  # 手動実行も可能
+
+jobs:
+  check-and-sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout docs repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '23'
+      
+      - name: Check upstream changes
+        id: check
+        run: |
+          # 上流リポジトリの最新コミットを取得
+          UPSTREAM_REPO="KQM-git/TCL"
+          LATEST_COMMIT=$(curl -s https://api.github.com/repos/$UPSTREAM_REPO/commits/main | jq -r '.sha')
+          
+          # 前回同期したコミットを読み込み
+          if [ -f .last-sync-commit ]; then
+            LAST_SYNC_COMMIT=$(cat .last-sync-commit)
+          else
+            LAST_SYNC_COMMIT=""
+          fi
+          
+          echo "Latest upstream commit: $LATEST_COMMIT"
+          echo "Last synced commit: $LAST_SYNC_COMMIT"
+          
+          if [ "$LATEST_COMMIT" != "$LAST_SYNC_COMMIT" ]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "latest_commit=$LATEST_COMMIT" >> $GITHUB_OUTPUT
+            echo "upstream_repo=$UPSTREAM_REPO" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Clone and export documentation
+        if: steps.check.outputs.has_changes == 'true'
+        run: |
+          # 上流リポジトリをクローン
+          git clone https://github.com/${{ steps.check.outputs.upstream_repo }}.git upstream-docs
+          
+          cd upstream-docs
+          npm ci
+          
+          # エクスポートスクリプトを実行
+          # 注: このスクリプトは自分で作成する必要があります
+          node ../scripts/export-from-docusaurus.js --input . --output ../exported
+          
+          cd ..
+          
+          # 最新のコミットハッシュを保存
+          echo "${{ steps.check.outputs.latest_commit }}" > .last-sync-commit
+      
+      - name: Update documentation
+        if: steps.check.outputs.has_changes == 'true'
+        run: |
+          # 既存のドキュメントを削除（.gitなどは除外）
+          find . -maxdepth 1 ! -name '.' ! -name '.git' ! -name '.github' ! -name 'scripts' ! -name '.last-sync-commit' -exec rm -rf {} +
+          
+          # エクスポートしたドキュメントをコピー
+          cp -r exported/* .
+          rm -rf exported upstream-docs
+          
+          # メタデータを更新
+          node scripts/update-metadata.js \
+            --upstream-commit "${{ steps.check.outputs.latest_commit }}" \
+            --upstream-repo "${{ steps.check.outputs.upstream_repo }}"
+      
+      - name: Commit and push
+        if: steps.check.outputs.has_changes == 'true'
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          
+          git add -A
+          git commit -m "Sync documentation from upstream@${{ steps.check.outputs.latest_commit }}"
+          
+          git push
