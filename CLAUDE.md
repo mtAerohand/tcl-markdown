@@ -4,83 +4,70 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This repository is a documentation synchronization project that:
-- Syncs content from the upstream KQM-git/TCL (KeqingMains Theorycrafting Library) repository
-- Converts Docusaurus-based documentation to markdown format
-- Contains Genshin Impact theorycrafting documentation including character guides, combat mechanics, and equipment information
+This is the TCL (Theorycrafting Library) markdown export repository. It contains:
+- Scripts to convert the TCL Docusaurus site data into plain markdown
+- Automated syncing from the upstream KQM-git/TCL repository
+- Generated markdown outputs suitable for AI/tool consumption
 
-## Repository Structure
+## Key Commands
 
-- `TCL/` - The Docusaurus documentation site (cloned from upstream)
-  - `docs/` - Main documentation content (characters, combat mechanics, equipment)
-  - `evidence/` - Evidence and testing documentation
-  - `tcg/` - Trading Card Game documentation
-  - `src/` - React components for the documentation site
-- `.github/workflows/generate-md.yaml` - GitHub Actions workflow for syncing upstream changes
-- `scripts/` - Directory for conversion scripts (currently empty, needs implementation)
-
-## Common Commands
-
-### Development Commands (run from TCL/ directory)
+### From root directory:
 ```bash
-# Install dependencies
-npm ci
+# Generate all markdown outputs
+node scripts/build-markdown.js
 
-# Start local development server
-npm run start
+# Generate specific content types
+node scripts/generate-characters.js
+node scripts/generate-weapons.js
+node scripts/generate-artifacts.js
+node scripts/process-docs.js
 
-# Build the documentation site
-npm run build
+# Verify generated content
+node scripts/verify-content.js
 
-# Type check the codebase
-npm run typecheck
-
-# Serve the built site locally
-npm run serve
+# Compare outputs
+node scripts/compare-outputs.js <dir1> <dir2>
 ```
 
-## Architecture & Key Concepts
+### From TCL directory (for Docusaurus development):
+```bash
+cd TCL
+npm install
+npm start      # Start development server
+npm run build  # Build static site
+npm run serve  # Serve built site
+```
 
-### Documentation Sync Process
-The repository is designed to automatically sync documentation from the upstream KQM TCL repository:
+## Architecture
 
-1. **GitHub Actions Workflow** (`.github/workflows/generate-md.yaml`):
-   - Runs daily at 2 AM UTC or can be triggered manually
-   - Checks for upstream changes by comparing commit hashes
-   - Clones the upstream repository when changes are detected
-   - Runs export scripts to convert Docusaurus content to markdown
-   - Commits and pushes the converted documentation
+### Repository Structure
+- `/TCL/` - Submodule containing the upstream Docusaurus site
+- `/scripts/` - Markdown generation and processing scripts
+- `/outputs/` - Generated markdown outputs (git-ignored)
+- `.github/workflows/` - Automated sync and generation workflows
 
-2. **Missing Implementation**:
-   The following scripts referenced in the workflow need to be created:
-   - `scripts/export-from-docusaurus.js` - Converts Docusaurus MDX files to standard markdown
-   - `scripts/update-metadata.js` - Updates metadata with upstream commit information
+### Data Flow
+1. JSON data files in `/TCL/src/data/` contain structured game data
+2. MDX documentation files in `/TCL/docs/` contain written content
+3. Scripts in `/scripts/` process both data sources
+4. Output is generated in `/outputs/` as plain markdown
 
-### Docusaurus Configuration
-- Site configuration in `TCL/docusaurus.config.js`
-- Uses custom React components for character data, weapons, artifacts
-- Supports LaTeX math rendering with KaTeX
-- Custom redirects for character aliases (e.g., /hutao → /characters/pyro/hu-tao)
-- Typesense search integration
+### Key Script Responsibilities
+- `build-markdown.js`: Orchestrates the entire markdown generation process
+- `generate-*.js`: Convert specific JSON data types to markdown format
+- `process-docs.js`: Strips React/MDX components from documentation files
+- Custom React component removal for AI-friendly output
 
-### Content Structure
-- **Character documentation**: Organized by element (anemo, cryo, dendro, etc.)
-- **Combat mechanics**: Damage formulas, elemental reactions, energy mechanics
-- **Equipment**: Weapons (by type) and artifacts
-- **Evidence**: Testing and verification documentation mirroring the main structure
+### Component Patterns
+The scripts handle removal of:
+- React components like `<CharStats>`, `<Weapon>`, `<Artifact>`
+- MDX imports and exports
+- Interactive elements (tabs, accordions)
+- While preserving content structure and mathematical formulas
 
-### Component Architecture
-The site uses custom React components for rendering game data:
-- Character components: `CharStatsTable`, `Talent`, `Constellation`
-- Weapon components: `Weapon`, `WeaponStats`
-- Artifact components: `Artifact`, `ArtifactSetBonus`
-- Common components: `Video`, `Embed`, various input components
+## Important Notes
 
-All character and weapon data is stored as JSON files in `src/data/`.
-
-## Implementation Priority
-
-To complete the repository setup, implement:
-1. `scripts/export-from-docusaurus.js` - Parse MDX files, convert custom components to markdown, handle LaTeX math
-2. `scripts/update-metadata.js` - Track sync status and upstream commit information
-3. Create `scripts/` directory if it doesn't exist
+- The TCL submodule tracks the upstream repository - avoid direct edits
+- Generated outputs are not committed to avoid bloat
+- GitHub Actions automatically sync and generate exports daily
+- The workflow tracks last synced commit to prevent redundant runs
